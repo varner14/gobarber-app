@@ -1,3 +1,4 @@
+/* eslint-disable no-debugger */
 /* eslint-disable @typescript-eslint/ban-types */
 /* eslint-disable react/jsx-indent-props */
 /* eslint-disable indent */
@@ -7,6 +8,7 @@ import React, { useCallback, useRef } from 'react';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
+
 import { FiArrowLeft, FiMail, FiLock, FiUser } from 'react-icons/fi';
 
 import getValidationErrors from '../../utils/getValidationErrors';
@@ -18,6 +20,7 @@ import Button from '../../components/Button';
 
 const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
+
   const handleSubmit = useCallback(async (data: object) => {
     try {
       formRef.current?.setErrors({});
@@ -34,7 +37,6 @@ const SignUp: React.FC = () => {
         abortEarly: false,
       });
     } catch (err) {
-      console.log(err);
       const errors = getValidationErrors(err);
 
       formRef.current?.setErrors(errors);
