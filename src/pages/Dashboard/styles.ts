@@ -35,8 +35,8 @@ export const Profile = styled.div`
   margin-left: 80px;
 
   img {
-    width: 75px;
-    height: 75px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
   }
 
@@ -52,6 +52,15 @@ export const Profile = styled.div`
 
     strong {
       color: #ff9000;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ff9000;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 `;
@@ -193,8 +202,8 @@ export const Appointment = styled.div`
     margin-left: 24px;
 
     img {
-      width: 75px;
-      height: 75px;
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
     }
 

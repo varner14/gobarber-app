@@ -4,6 +4,7 @@
 /* eslint-disable indent */
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { FiClock, FiPower } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import ptBr from 'date-fns/locale/pt-BR';
 import { isToday, format, parseISO, isAfter } from 'date-fns';
 
@@ -146,7 +147,9 @@ const Dashboard: React.FC = () => {
             <img src={user.avatar_url} alt={user.name} />
             <div>
               <span>Bem Vindo</span>
-              <strong>{user.name}</strong>
+              <Link to="/profile">
+                <strong>{user.name}</strong>
+              </Link>
             </div>
           </Profile>
 

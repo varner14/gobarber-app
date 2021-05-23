@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-types */
 /* eslint-disable indent */
 import styled, { css } from 'styled-components';
 
